@@ -1,0 +1,4 @@
+#
+# Yacc
+*.output
+*.tab.c
