@@ -2,3 +2,13 @@
 # Yacc
 *.output
 *.tab.c
+
+#
+# Lex
+lex.yy.c
+
+
+#
+# C
+*.o
+a.out
