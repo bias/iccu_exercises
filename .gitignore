@@ -2,6 +2,7 @@
 # Yacc
 *.output
 *.tab.c
+*.tab.h
 
 #
 # Lex
