@@ -5,24 +5,24 @@
 
 #ifdef DEBUG	/* debugging version - if assert ok */
 
-#	include <assert.h>
+#include <assert.h>
 
-	main() {
-		char *p;
-		assert(sizeof(int) >= sizeof(char *));
-		while (p = (char *) yylex())
-			printf("%-10.10s is \"%s\"\n", p, yytext);
-	}
+main() {
+	char *p;
+	assert(sizeof(int) >= sizeof(char *));
+	while (p = (char *) yylex())
+		printf("%-10.10s is \"%s\"\n", p, yytext);
+}
 
-	s_lookup() {}
-	int yynerrs = 0;
+s_lookup() {}
+int yynerrs = 0;
 
-#	define token(x)	(int) "x"
+#define token(x) (int) "x"
 
 #else ! DEBUG	/* production version */
 
-#	include "y.tab.h"
-#	define token(x)
+#include "y.tab.h"
+#define token(x) x
 
 #endif DEBUG
 
